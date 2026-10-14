@@ -1,0 +1,20 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+secrets*.json
+
+# Dependencies
+node_modules/
+
+# Generated / local files
+.obsidian/
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+*.log
+.playwright-mcp/
+test-results/
+playwright-report/

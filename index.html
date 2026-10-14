@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guess a Number</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game">
+    <h1>Guess a Number</h1>
+    <p class="subtitle">Guess a number between 1 and 100.<br>You have 5 guesses total</p>
+
+    <form id="guess-form" novalidate>
+      <label for="guess-input">enter your guess:</label>
+      <input id="guess-input" type="number" min="1" max="100" step="1" autocomplete="off" autofocus>
+      <button type="submit" id="guess-btn">Guess</button>
+    </form>
+
+    <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+
+    <div class="remaining">
+      <span class="remaining-label">Remaining Guesses</span>
+      <span id="remaining" class="remaining-count">5</span>
+    </div>
+  </main>
+
+  <div id="modal" class="modal-backdrop" hidden>
+    <div id="modal-box" class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-message">
+      <p id="modal-message"></p>
+      <p id="modal-detail" class="modal-detail"></p>
+      <button type="button" id="modal-btn"></button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
